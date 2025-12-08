@@ -60,9 +60,6 @@ export default function Reviews() {
             className="absolute w-[90%] md:w-[50%] bg-white p-8 rounded-2xl shadow-2xl border border-indigo-100"
           >
             <div className="flex justify-center mb-3">
-              {Array.from({ length: reviews[index].rating }).map((_, i) => (
-                <FaStar key={i} className="text-yellow-400 text-lg" />
-              ))}
             </div>
             <p className="text-gray-700 italic mb-4 text-lg">
               “{reviews[index].text}”
