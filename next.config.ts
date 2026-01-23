@@ -3,7 +3,16 @@ import type { NextConfig } from "next";
 const nextConfig: NextConfig = {
   reactStrictMode: true,
   images: {
-    domains: ["localhost"], // allow images from your backend
+    remotePatterns: [
+      {
+        protocol: "https",
+        hostname: "https://rimsha-lab-backend.vercel.app/",
+      },
+      {
+        protocol: "https",
+        hostname: "res.cloudinary.com",
+      },
+    ],
   },
 };
 
