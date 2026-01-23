@@ -5,12 +5,16 @@ const nextConfig: NextConfig = {
   images: {
     remotePatterns: [
       {
-        protocol: "https",
-        hostname: "https://rimsha-lab-backend.vercel.app/",
+        protocol: "http",
+        hostname: "localhost",
       },
       {
         protocol: "https",
         hostname: "res.cloudinary.com",
+      },
+      {
+        protocol: "https",
+        hostname: "rimshalab-backend.vercel.app",
       },
     ],
   },
