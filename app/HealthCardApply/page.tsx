@@ -46,7 +46,7 @@ export default function HealthCardApply() {
     if (imageFile) formData.append("image", imageFile);
 
     try {
-      const res = await fetch("http://localhost:5000/api/health-card/apply", {
+      const res = await fetch("https://rimsha-lab-backend.vercel.app/api/health-card/apply", {
         method: "POST",
         body: formData,
       });

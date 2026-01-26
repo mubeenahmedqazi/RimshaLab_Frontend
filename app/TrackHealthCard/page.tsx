@@ -32,7 +32,7 @@ export default function TrackHealthCard() {
 
     setLoading(true);
     try {
-      const res = await fetch(`http://localhost:5000/api/health-card/by-cnic/${digits}`);
+      const res = await fetch(`https://rimsha-lab-backend.vercel.app/api/health-card/by-cnic/${digits}`);
       const data = await res.json();
 
       if (!data.success) {
