@@ -32,7 +32,11 @@ export default function TrackHealthCard() {
 
     setLoading(true);
     try {
-      const res = await fetch(`https://rimsha-lab-backend.vercel.app/api/health-card/by-cnic/${digits}`);
+      // Use environment variable or condition
+      const API_URL = process.env.NEXT_PUBLIC_API_URL || 'http://localhost:5000';
+       
+
+      const res = await fetch(`${API_URL}/api/health-card/by-cnic/${digits}`);
       const data = await res.json();
 
       if (!data.success) {
@@ -141,7 +145,7 @@ export default function TrackHealthCard() {
       const canvas = await html2canvas(tempContainer, {
         scale: 2,
         backgroundColor: '#3730a3',
-        useCORS: true,
+        // useCORS: false,
         logging: false
       });
 
