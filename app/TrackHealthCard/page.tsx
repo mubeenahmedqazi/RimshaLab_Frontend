@@ -33,10 +33,18 @@ export default function TrackHealthCard() {
     setLoading(true);
     try {
       // Use environment variable or condition
-      const API_URL = process.env.NEXT_PUBLIC_API_URL;
-       
+      //const API_URL = process.env.NEXT_PUBLIC_API_URL;
 
-      const res = await fetch(`${API_URL}/api/health-card/by-cnic/${digits}`);
+
+      const res = await fetch(
+        `https://rimsha-lab-backend.vercel.app/api/health-card/by-cnic/${digits}`,
+        {
+          method: "GET",
+          headers: {
+            "Content-Type": "application/json",
+          },
+        }
+      );
       const data = await res.json();
 
       if (!data.success) {
