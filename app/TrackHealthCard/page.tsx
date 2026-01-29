@@ -33,7 +33,7 @@ export default function TrackHealthCard() {
     setLoading(true);
     try {
       // Use environment variable or condition
-      const API_URL = process.env.NEXT_PUBLIC_API_URL || 'http://localhost:5000';
+      const API_URL = process.env.NEXT_PUBLIC_API_URL;
        
 
       const res = await fetch(`${API_URL}/api/health-card/by-cnic/${digits}`);
