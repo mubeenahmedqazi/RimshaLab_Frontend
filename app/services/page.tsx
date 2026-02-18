@@ -244,8 +244,23 @@ export default function ServicesPage() {
         </div>
       </section>
 
-     
-      
+      {/* CTA strip */}
+      <section className="py-24 bg-indigo-900 text-white">
+        <div className="max-w-7xl mx-auto px-6 flex flex-col md:flex-row items-center justify-between gap-6">
+          <div>
+            <h4 className="text-2xl font-bold">Need help choosing a test?</h4>
+            <p className="mt-2 text-indigo-200">Call our helpline or book a free home sample collection in covered areas.</p>
+          </div>
+          <div className="flex gap-4">
+            <Link href="/contact">
+              <button className="bg-white text-indigo-900 px-6 py-3 rounded-md font-semibold cursor-pointer shadow-md hover:brightness-95 transition">Contact Us</button>
+            </Link>
+            <Link href="/BookingSample">
+              <button className="bg-indigo-500 px-6 py-3 rounded-md font-semibold cursor-pointer shadow-md hover:bg-indigo-600 transition">Book Now</button>
+            </Link>
+          </div>
+        </div>
+      </section>
 
     </main>
   );
